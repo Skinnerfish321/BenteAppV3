@@ -734,6 +734,102 @@ button, input, textarea { font-family: inherit; }
 .qz-miss.ok b { color: var(--green); }
 .qz-miss.no b { color: var(--orange-dark); }
 
+/* ══ V5: chat modes ══ */
+.chat-header { transition: background .25s; }
+.chat-header.bro { background: #21468B; }
+.chat-header.teacher { background: #2f6f4f; }
+.av-emoji { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: white; font-size: 22px; }
+.mode-seg { display: flex; gap: 3px; background: rgba(0,0,0,0.16); border-radius: 14px; padding: 3px; margin-top: 10px; }
+.mode-seg button {
+  flex: 1; border: none; background: none; color: rgba(255,255,255,0.92); font-size: 14px; font-weight: 700;
+  padding: 8px 4px; border-radius: 11px; cursor: pointer; white-space: nowrap; transition: background .15s, color .15s;
+}
+.mode-seg button.on { background: white; color: var(--orange-dark); box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.chat-header.bro .mode-seg button.on { color: #21468B; }
+.chat-header.teacher .mode-seg button.on { color: #2f6f4f; }
+.scenario-row { margin-top: 8px; }
+.scenario-btn { padding: 10px; }
+.b-lesson { max-width: 92%; line-height: 1.6; }
+.b-lesson b.nl { color: #2f6f4f; font-weight: 800; cursor: pointer; border-bottom: 1.5px dotted rgba(47,111,79,0.45); }
+.lesson-saves { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.lesson-saves .save-pill { margin-top: 0; }
+.scenario-banner.lesson { background: linear-gradient(135deg, #2f6f4f 0%, #3b8a62 100%); box-shadow: 0 4px 14px rgba(47,111,79,0.28); }
+.ls-body { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+.ls-next {
+  margin: 4px 18px 10px; display: flex; align-items: center; gap: 12px; text-align: left; border: none;
+  border-radius: 16px; padding: 14px 16px; background: #2f6f4f; color: white; font-size: 16px; font-weight: 800; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(47,111,79,0.3);
+}
+.ls-next small { display: block; font-size: 12px; font-weight: 700; opacity: 0.8; margin-bottom: 2px; }
+.ls-play { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ls-body { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.ls-body .pk-list { flex: none; overflow: visible; min-height: 0; }
+.ls-mine { padding-bottom: 14px !important; }
+.ls-mine .pk-tick { border-color: transparent; font-size: 15px; }
+.ls-del { border: none; background: none; color: var(--muted); font-size: 22px; line-height: 1; padding: 0 4px; cursor: pointer; flex: none; }
+.ls-ai { margin: 0 18px 14px; padding: 14px; border: 1.5px solid #b9d8c4; background: #f3faf6; border-radius: 16px; display: flex; flex-direction: column; gap: 10px; }
+.ls-ai-top { display: flex; align-items: center; justify-content: space-between; font-weight: 800; color: #2f6f4f; font-size: 15px; }
+.ls-ai-sub { font-size: 13.5px; color: var(--muted); line-height: 1.45; margin-top: -4px; }
+.ls-ai textarea { resize: none; background: white; padding: 11px 13px; line-height: 1.4; }
+.ls-ai textarea:focus { border-color: #8fc3a5; }
+.ls-ideas { display: flex; flex-wrap: wrap; gap: 6px; }
+.ls-ideas button { border: 1px solid #b9d8c4; background: white; color: #2f6f4f; font-size: 12.5px; font-weight: 700; padding: 6px 11px; border-radius: 14px; cursor: pointer; font-family: inherit; }
+.ls-ai .wv-btn { background: #2f6f4f; }
+.ls-ai .wv-btn.sec { background: white; color: #2f6f4f; border: 1.5px solid #b9d8c4; }
+.ls-ai .wv-btn:disabled { opacity: 0.6; }
+.ls-err { font-size: 13px; color: #b3261e; line-height: 1.4; }
+.ls-x { border: none; background: none; font-size: 22px; line-height: 1; color: var(--muted); cursor: pointer; padding: 0 2px; }
+.ls-plan-title { font-family: Georgia, serif; font-size: 19px; font-weight: 800; color: var(--text); margin-top: -2px; }
+.ls-plan-goal { font-size: 14px; color: var(--muted); line-height: 1.45; margin-top: -6px; }
+.ls-steps { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.5; }
+.ls-steps li { margin-bottom: 3px; }
+.ls-words { display: flex; flex-wrap: wrap; gap: 6px; }
+.ls-words span { background: white; border: 1px solid #d5e8dc; border-radius: 12px; padding: 5px 10px; font-size: 13px; color: var(--muted); }
+.ls-words b { color: #2f6f4f; cursor: pointer; }
+.ls-ai-btns { display: flex; gap: 8px; }
+.ls-head { font-size: 13px; font-weight: 700; color: var(--muted); padding: 0 20px 8px; }
+.ls-list { padding-bottom: 18px; }
+.ls-list .pk-tick { color: var(--muted); font-size: 12px; font-weight: 700; }
+.ls-list .pk-row.on { background: #edf6f0; border-color: #b9d8c4; }
+.ls-list .pk-row.on .pk-tick { background: #2f6f4f; border-color: #2f6f4f; color: white; }
+
+/* V6 */
+.sel-ok { -webkit-user-select: text; user-select: text; }
+.corr-wrote s { color: #b3261e; text-decoration-color: rgba(179,38,30,0.55); }
+.corr-fixed ins { text-decoration: none; color: #2f6f4f; background: rgba(47,111,79,0.1); border-radius: 5px; padding: 0 3px; }
+.chat-avatar, .float-avatar { position: relative; overflow: visible; }
+.chat-avatar img, .float-avatar img { border-radius: 50%; display: block; }
+.av-badge { position: absolute; right: -5px; bottom: -4px; width: 20px; height: 20px; border-radius: 50%; background: white; font-size: 11px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.25); }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.chat-msgs > * { animation: rise .22s ease-out both; }
+@keyframes pop { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }
+.scenario-banner.done .sb-lbl { display: inline-block; transform-origin: left center; animation: pop .5s ease-out .15s both; }
+@media (prefers-reduced-motion: reduce) { .chat-msgs > *, .scenario-banner.done .sb-lbl { animation: none; } }
+.help-btn { font-size: 17px; margin-right: -4px; }
+.help-pop {
+  position: fixed; left: 14px; right: 14px; bottom: calc(var(--nav-h) + var(--safe-b) + 68px); z-index: 120;
+  background: white; border: 1px solid var(--line); border-radius: 18px; padding: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+  display: flex; flex-direction: column; gap: 6px; animation: rise .18s ease-out both;
+}
+.help-pop.hidden { display: none; }
+.help-title { font-size: 12.5px; font-weight: 700; color: var(--muted); padding: 0 4px 2px; }
+.help-row { text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 9px 12px; cursor: pointer; font-family: inherit; }
+.help-row b { display: block; font-size: 15.5px; color: var(--text); }
+.help-row small { font-size: 12.5px; color: var(--muted); font-style: italic; }
+.ls-sec { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 20px 5px; font-family: Georgia, serif; font-size: 16px; font-weight: 800; color: var(--text); }
+.ls-sec small { font-family: inherit; font-size: 12px; font-weight: 700; color: var(--muted); }
+.ls-bar { height: 4px; margin: 0 20px 9px; background: #e6efe9; border-radius: 3px; overflow: hidden; }
+.ls-bar i { display: block; height: 100%; background: #2f6f4f; border-radius: 3px; }
+.ls-body .ls-list { padding-bottom: 14px; }
+.ls-head-row { display: flex; justify-content: space-between; align-items: center; }
+.ls-edit { border: none; background: none; color: #2f6f4f; font-size: 13px; font-weight: 800; cursor: pointer; font-family: inherit; padding: 2px 0; }
+.ls-hint { margin: 0 18px 10px; padding: 9px 12px; background: #f3faf6; border-radius: 12px; font-size: 13px; color: #2f6f4f; line-height: 1.4; }
+.ls-note { border: none; background: none; font-size: 17px; padding: 2px 4px; cursor: pointer; flex: none; }
+.ls-notes { padding: 0 20px 18px; display: flex; flex-direction: column; gap: 10px; }
+.ls-back { align-self: flex-start; border: none; background: none; color: #2f6f4f; font-size: 15px; font-weight: 800; cursor: pointer; font-family: inherit; padding: 2px 0; }
+.ls-notes-body { max-width: none; font-size: 15.5px; line-height: 1.6; background: #f3faf6; border-radius: 14px; padding: 13px 15px; }
+.ls-notes .wv-btn { background: #2f6f4f; }
+
 /* ── MODALS ── */
 .overlay {
   position: fixed; inset: 0; z-index: 500; background: rgba(28,22,18,0.45);
@@ -816,9 +912,9 @@ button, input, textarea { font-family: inherit; }
     <div class="hero-wrap">
       <img class="hero-img" src="" data-hero alt="Bente & jij fietsen langs de gracht">
       <div class="float-card" onclick="goTo('chat')">
-        <div class="float-avatar"><img src="" data-avatar alt="Bente"></div>
+        <div class="float-avatar" id="float-av"><img src="" data-avatar alt="Bente"></div>
         <div class="float-body">
-          <div class="float-name">Bente <span class="float-status"><span class="online-dot"></span> online</span></div>
+          <div class="float-name"><span id="float-who">Bente</span> <span class="float-status"><span class="online-dot"></span> online</span></div>
           <div class="float-msg" id="latest-msg">Hoi! Zullen we Nederlands oefenen? 🌷</div>
         </div>
         <button class="float-go" aria-label="Chat met Bente">💬</button>
@@ -866,22 +962,29 @@ button, input, textarea { font-family: inherit; }
 <div class="screen hidden" id="chat">
   <div class="chat-header">
     <div class="chat-header-row">
-      <div class="chat-avatar"><img src="" data-avatar alt="Bente"></div>
+      <div class="chat-avatar" id="chat-av"><img src="" data-avatar alt="Bente"></div>
       <div class="ch-info">
         <div class="ch-name">Bente</div>
         <div class="ch-status" id="ch-status">Leiden · online</div>
       </div>
       <button class="hdr-btn" onclick="toggleTTS()" id="tts-btn">🔊</button>
     </div>
+    <div class="mode-seg" id="mode-seg">
+      <button data-mode="gf" onclick="switchMode('gf')">💕 Vriendin</button>
+      <button data-mode="bro" onclick="switchMode('bro')">🍻 Bro</button>
+      <button data-mode="teacher" onclick="switchMode('teacher')">📚 Lerares</button>
+    </div>
     <div class="scenario-row">
-      <button class="scenario-btn" onclick="newScenario()">🎭 Start een scenario</button>
+      <button class="scenario-btn" id="start-btn" onclick="newScenario()">🎭 Start een scenario</button>
       <button class="scenario-btn end" id="end-scenario-btn" onclick="endScenario()">✖ Stop scenario</button>
     </div>
   </div>
   <div class="chat-msgs" id="msgs"></div>
+  <div class="help-pop hidden" id="help-pop"></div>
   <div class="chat-input-wrap">
     <div class="input-pill">
       <textarea class="chat-ta" id="msg-input" placeholder="Schrijf in het Nederlands…" rows="1" oninput="autoResize(this)" onkeydown="onKey(event)"></textarea>
+      <button class="mic-btn help-btn" id="help-btn" onclick="toggleHelp()" aria-label="Hulp">💡</button>
       <button class="mic-btn" id="mic-btn" onclick="toggleMic()">🎤</button>
     </div>
     <button class="send-fab" id="send-btn" onclick="sendMessage()">↑</button>
@@ -995,6 +1098,15 @@ button, input, textarea { font-family: inherit; }
   </div>
 </div>
 
+<!-- LESSON PICKER -->
+<div class="overlay hidden" id="lesson-modal" onclick="closeSheet(event,'lesson-modal')">
+  <div class="sheet pick-sheet">
+    <div class="handle"></div>
+    <div class="sheet-title">Kies een les 📚</div>
+    <div class="ls-body" id="lesson-body"></div>
+  </div>
+</div>
+
 <!-- WEEK WORD PICKER -->
 <div class="overlay hidden" id="pick-modal" onclick="closeSheet(event,'pick-modal')">
   <div class="sheet pick-sheet">
@@ -1021,10 +1133,12 @@ document.querySelectorAll('[data-avatar]').forEach(i=>i.src=AVATAR);
 // ═══ STATE ═══
 let apiKey = localStorage.getItem('bente_apikey') || '';
 let words = JSON.parse(localStorage.getItem('bente_words') || '[]');
-let chatLog = JSON.parse(localStorage.getItem('bente_chatlog') || '[]'); // display log
-let apiHistory = JSON.parse(localStorage.getItem('bente_apihist') || '[]'); // API messages
-let userFacts = JSON.parse(localStorage.getItem('bente_facts') || '[]'); // long-term memory
-let currentScenario = localStorage.getItem('bente_scenario') || '';
+let chatMode = localStorage.getItem('bente_mode') || 'gf';   // gf, bro or teacher; each has its own chat
+if (!['gf','bro','teacher'].includes(chatMode)) chatMode = 'gf';
+let chatLog = JSON.parse(localStorage.getItem(keyFor('bente_chatlog')) || '[]'); // display log
+let apiHistory = JSON.parse(localStorage.getItem(keyFor('bente_apihist')) || '[]'); // API messages
+let userFacts = JSON.parse(localStorage.getItem('bente_facts') || '[]'); // long-term memory, shared by all modes
+let currentScenario = localStorage.getItem(keyFor('bente_scenario')) || '';   // scenario, or the lesson in teacher mode
 let currentTab = 'new';
 let selectMode = false;
 let selectedIds = new Set();
@@ -1085,7 +1199,7 @@ const SCENARIOS = [
 
 // ═══ INIT ═══
 function init() {
-  ensureWeek(); setWOD(); refreshHome(); renderBank(); initTTS(); updateScenarioButtons();
+  ensureWeek(); setWOD(); refreshHome(); renderBank(); initTTS(); renderChatHeader();
   updateFrontSeg(); goTo('home');
   if (!apiKey) {
     document.getElementById('api-gate').classList.remove('hidden');
@@ -1127,7 +1241,7 @@ function goTo(s) {
   if (s==='bank') renderBank();
   if (s==='home') refreshHome();
   if (s==='week') renderWeek();
-  if (s==='chat') chatTip();
+  if (s==='chat') { chatTip(); maybeOpen(); }
 }
 
 // ═══ API GATE ═══
@@ -1246,6 +1360,7 @@ function toggleMic() {
 // ═══ MEMORY / SYSTEM PROMPT ═══
 function sysPrompt() {
   const facts = userFacts.slice(-15).join('; ');
+  if (chatMode === 'teacher') return teacherPrompt(facts);
   // Offer a few saved words only some of the time, so Bente doesn't lean on them every message.
   // Weekly-goal words get a slightly higher chance than the rest of the bank.
   const wkOpen = weekWordList().filter(w => mastery(w.id) < 3);
@@ -1264,17 +1379,18 @@ WOORDEN UIT HET WEEKDOEL (optioneel): ${fmtW(wkOpen)}
 OPGESLAGEN WOORDEN VAN DE GEBRUIKER (optioneel): ${fmtW(words)}
 - Gebruik hooguit één ervan, en alleen als het vanzelf in je antwoord past. Anders negeer je de lijst`;
   }
-  return `Je bent Bente, een 26-jarige Nederlandse vrouw uit Leiden. Je bent warm, speels, zelfverzekerd, slim, en soms een beetje flirterig. Je voelt als een echt mens — NOOIT als een AI-assistent.
+  return `${chatMode === 'bro' ? BRO_PERSONA : GF_PERSONA}
 
 HUIDIG SCENARIO: ${currentScenario || 'een gewoon gesprek'}
-
-PERSOONLIJKHEID: Je houdt van fietsen, de grachten, stroopwafels, kunstgeschiedenis (je studie), Ajax, bruine cafés en weekendtrips. Je hebt echte meningen en stemmingen. Je onthoudt wat de gebruiker je vertelt. Je begint soms zelf nieuwe onderwerpen. Je bent GEEN lerares tenzij gevraagd.
+NU: ${timeContext()}
 
 TAALNIVEAU — HEEL BELANGRIJK:
 - Spreek EENVOUDIG Nederlands (A1-B1 niveau)
 - Korte zinnen, alledaagse woorden, realistische dagelijkse uitdrukkingen
 - GEEN ingewikkelde grammatica of moeilijke woorden
 - Antwoorden van 1-3 korte zinnen
+
+${CONVO_RULES}
 
 CORRECTIES:
 - Als de gebruiker Nederlands schrijft met fouten: geef de gecorrigeerde zin + Engelse vertaling
@@ -1284,7 +1400,7 @@ GEHEUGEN: Als de gebruiker iets persoonlijks vertelt (naam, werk, hobby's, famil
 
 ANTWOORD ALTIJD in geldige JSON (geen markdown):
 {
-  "dutch": "Jouw Nederlandse antwoord (simpel, warm, 1-3 zinnen)",
+  "dutch": "Jouw Nederlandse antwoord (simpel, 1-3 zinnen)",
   "english": "English translation",
   "corrected_dutch": "Gecorrigeerde versie van de zin van de gebruiker (null als correct of Engels)",
   "corrected_english": "English translation of the corrected sentence (null if no correction)",
@@ -1297,40 +1413,568 @@ ANTWOORD ALTIJD in geldige JSON (geen markdown):
 WAT JE WEET over de gebruiker: ${facts||'nog niets'}${wordBlock}`;
 }
 
+// ═══ CHAT MODES: Vriendin, Bro, Lerares ═══
+const MODES = {
+  gf:      {name:'Bente',     status:'Verpleegkundige · Leiden · online', hello:'Hoi! Zullen we Nederlands oefenen? 🌷',
+            start:'🎭 Start een scenario', stop:'✖ Stop scenario'},
+  bro:     {name:'Bente',     status:'Sport en gezelligheid · online',    hello:'Hé! Zin om even over sport te kletsen? ⚽', badge:'⚽',
+            start:'🎭 Start een scenario', stop:'✖ Stop scenario'},
+  teacher: {name:'Juf Bente', status:'Jouw lerares Nederlands',           hello:'Klaar voor je Nederlandse les? 📚', badge:'📚',
+            start:'📚 Kies een les',       stop:'✖ Stop les'}
+};
+const BRO_SCENARIOS = [
+  '⚽ Samen voetbal kijken in de kroeg',
+  '🏟️ Naar een wedstrijd in de Johan Cruijff ArenA',
+  '🥅 Na jouw voetbaltraining',
+  '🎮 EA FC spelen op de bank',
+  '🏋️ Samen in de sportschool',
+  '🍖 Barbecue met vrienden',
+  '🏎️ Formule 1 kijken op zondag',
+  '🎯 Darts kijken met een biertje',
+  '🎾 Een potje padel',
+  '🚲 Een fietstocht langs de bollenvelden',
+  '🍺 Vrijdagmiddagborrel na het werk',
+  '🧳 Een weekendje weg plannen met vrienden'
+];
+const LESSON_PLAN = [
+  {sec: 'De basis', items: [
+    ['Begroeten en jezelf voorstellen', 'Say hello, introduce yourself and ask how someone is.'],
+    ['De of het: lidwoorden', 'The two words for "the", and how to know which one to use.'],
+    ['Ik, jij, hij, zij: persoonlijke voornaamwoorden', 'I, you, he, she, we and they.'],
+    ['Zijn en hebben', 'The two most important verbs: to be and to have.'],
+    ['Vragen stellen: wie, wat, waar, wanneer', 'Ask questions with who, what, where and when.'],
+    ['Niet of geen: ontkennen', 'Say "not" and "no": when to use niet and when geen.']
+  ]},
+  {sec: 'Getallen en tijd', items: [
+    ['Getallen van 0 tot 20', 'Count from zero to twenty.'],
+    ['Getallen tot 100 en prijzen', 'Numbers up to 100, and talking about prices.'],
+    ['Getallen boven 100, jaartallen en data', 'Big numbers, years and dates, like your birthday.'],
+    ['Dagen, maanden en hoe laat het is', 'Days, months and the basics of telling the time.'],
+    ['Klokkijken: half drie en kwart over', 'Tell the time properly, including the tricky "half".'],
+    ['Eerste, tweede, derde: rangtelwoorden', 'First, second, third: for dates, floors and rankings.']
+  ]},
+  {sec: 'Werkwoorden en tijden', items: [
+    ['Werkwoorden in de tegenwoordige tijd', 'The present tense: how regular verbs change.'],
+    ['Onregelmatige werkwoorden: gaan, komen, doen', 'Common verbs that do not follow the rules.'],
+    ['Kunnen, willen, moeten en mogen', 'Can, want, must and may.'],
+    ['Scheidbare werkwoorden: opstaan, meegaan', 'Verbs that split in two, like "ik sta op".'],
+    ['De toekomst met gaan: ik ga morgen ...', 'Talk about your plans using gaan plus a verb.'],
+    ['De toekomst met zullen', 'Promises, predictions and suggestions with zullen.'],
+    ['De verleden tijd: ik heb ... gedaan', 'The past with hebben: what you did or have done.'],
+    ['De verleden tijd met zijn: ik ben gegaan', 'Verbs that use zijn in the past, like going and coming.'],
+    ['De verleden tijd: ik werkte, ik was', 'The simple past, for telling a story.'],
+    ['Onregelmatige verleden tijd: ging, at, zag', 'Common verbs with an irregular past.'],
+    ['De gebiedende wijs: kom, ga zitten', 'Give instructions, directions and friendly orders.'],
+    ['Wederkerende werkwoorden: ik voel me', 'Verbs with me, je and zich, like feeling and remembering.']
+  ]},
+  {sec: 'Zinnen bouwen', items: [
+    ['Woordvolgorde: het werkwoord op plek 2', 'Dutch word order: the verb always comes second.'],
+    ['Inversie: morgen ga ik ...', 'What happens when a sentence starts with a time or place.'],
+    ['Bijvoeglijke naamwoorden: mooi of mooie', 'Describing things, and when to add an -e.'],
+    ['Meervoud: één fiets, twee fietsen', 'Plurals: making one into many.'],
+    ['Mijn, jouw, zijn, haar: bezit', 'My, your, his and her.'],
+    ['Mij, jou, hem, haar en ons', 'Me, you, him, her and us.'],
+    ['Vergelijken: groter dan, de beste', 'Compare things: bigger, better, the best.'],
+    ['Voorzetsels: in, op, bij, naar', 'The small words for place and direction.'],
+    ['Bijzinnen met omdat, dat en als', 'Longer sentences with because, that and if.'],
+    ['Het woordje er', 'The little word "er" and its many uses.']
+  ]},
+  {sec: 'Alledaags', items: [
+    ['Eten en drinken bestellen', 'Order food and drinks in a café or restaurant.'],
+    ['De weg vragen en het ov', 'Ask for directions and use trains, trams and buses.'],
+    ['Afspreken: zullen we ...?', 'Make plans with someone and agree a time and place.'],
+    ['Over je werk en je dag praten', 'Talk about your job and what you did today.']
+  ]}
+];
+const LESSONS = LESSON_PLAN.flatMap(x => x.items.map(i => i[0]));
+function keyFor(base) { return chatMode === 'gf' ? base : base + '_' + chatMode; }
+function logPush(...items) { items.forEach(i => { if (!i.ts) i.ts = Date.now(); chatLog.push(i); }); }
+function avatarHTML(mode) {
+  const M = MODES[mode];
+  return `<img src="${AVATAR}" alt="${esc(M.name)}">${M.badge ? `<span class="av-badge">${M.badge}</span>` : ''}`;
+}
+function plainLesson(t) { return String(t || '').replace(/\*\*/g, ''); }
+function lastBotText() {
+  const b = [...chatLog].reverse().find(h => h.t === 'bot');
+  return b ? (b.fmt === 'lesson' ? plainLesson(b.dutch) : b.dutch) : MODES[chatMode].hello;
+}
+function statusText() {
+  if (!currentScenario) return MODES[chatMode].status;
+  const s = currentScenario.replace(/^[^\p{L}\d]+/u, '');
+  return (chatMode === 'teacher' ? 'Les: ' : '') + (s.length > 34 ? s.slice(0, 33) + '…' : s);
+}
+function renderChatHeader() {
+  const M = MODES[chatMode], hdr = document.querySelector('.chat-header');
+  hdr.classList.toggle('bro', chatMode === 'bro');
+  hdr.classList.toggle('teacher', chatMode === 'teacher');
+  document.querySelector('.ch-name').textContent = M.name;
+  document.getElementById('ch-status').textContent = statusText();
+  document.getElementById('chat-av').innerHTML = avatarHTML(chatMode);
+  document.querySelectorAll('#mode-seg button').forEach(b => b.classList.toggle('on', b.dataset.mode === chatMode));
+  document.getElementById('start-btn').textContent = M.start;
+  document.getElementById('end-scenario-btn').textContent = M.stop;
+  document.getElementById('help-btn').style.display = chatMode === 'teacher' ? 'none' : '';
+  toggleHelp(false);
+  document.getElementById('msg-input').placeholder = chatMode === 'teacher' ? 'Antwoord of stel een vraag…' : 'Schrijf in het Nederlands…';
+  updateScenarioButtons();
+}
+function switchMode(m) {
+  if (m === chatMode || !MODES[m]) return;
+  if (busy) { toast('Even wachten…'); return; }
+  if (pending) confirmCorrected();
+  persist();
+  chatMode = m; localStorage.setItem('bente_mode', m);
+  chatLog = JSON.parse(localStorage.getItem(keyFor('bente_chatlog')) || '[]');
+  apiHistory = JSON.parse(localStorage.getItem(keyFor('bente_apihist')) || '[]');
+  currentScenario = localStorage.getItem(keyFor('bente_scenario')) || '';
+  renderChatHeader();
+  restoreChat();
+  if (currentScreen === 'chat') maybeOpen();
+}
+
+// Rendering one reply from Bente (any mode) and storing it
+function nlParts(msg) { return [...String(msg).matchAll(/\*\*(.+?)\*\*/g)].map(m => m[1]).filter(t => /\p{L}/u.test(t)); }
+function showReply(p, opener) {
+  if (chatMode === 'teacher') {
+    const msg = p.message || p.dutch;
+    if (p.lesson_topic && !currentScenario) {
+      currentScenario = String(p.lesson_topic).slice(0, 80);
+      localStorage.setItem(keyFor('bente_scenario'), currentScenario);
+      addScenarioBanner(currentScenario, true, 'lesson');
+      renderChatHeader();
+    }
+    const phrases = (p.save_phrases || []).filter(x => x && x.dutch).slice(0, 4);
+    addLesson(msg, phrases);
+    logPush({t:'bot', dutch:msg, english:'', fmt:'lesson', phrases, opener: !!opener});
+    if (ttsOn) { const nl = nlParts(msg).join('. '); if (nl) speak(nl); }
+    if (p.lesson_done && currentScenario) finishLesson(msg);
+  } else {
+    addBot(p.dutch, p.english, p.suggest_save ? p.key_phrase : null);
+    logPush({t:'bot', dutch:p.dutch, english:p.english, opener: !!opener});
+    if (ttsOn) speak(p.dutch);
+  }
+}
+function savePill(kp) {
+  return `<span class="save-pill" data-save-d="${esc(kp.dutch)}" data-save-e="${esc(kp.english || '')}">💾 Bewaar: ${esc(kp.dutch)}</span>`;
+}
+function fmtLesson(t) {
+  return esc(t).replace(/\*\*(.+?)\*\*/g, (m, x) => /\p{L}/u.test(x) ? `<b class="nl">${x}</b>` : `<b>${x}</b>`).replace(/\n/g, '<br>');
+}
+function addLesson(msg, phrases, doScroll = true) {
+  const el = document.createElement('div');
+  el.className = 'msg-row bot';
+  const nl = nlParts(msg);
+  let h = `<div class="msg-name">${esc(MODES.teacher.name)}</div><div class="bubble b-bot b-lesson"><span class="bot-text">${fmtLesson(msg)}</span>`;
+  if (phrases && phrases.length) h += `<div class="lesson-saves">${phrases.map(savePill).join('')}</div>`;
+  h += `</div>`;
+  if (nl.length) h += `<button class="listen-pill" data-say="${esc(nl.join('. '))}">🔊 Luister naar het Nederlands</button>`;
+  el.innerHTML = h;
+  msgsEl().appendChild(el); if (doScroll) scrollDown();
+  document.getElementById('latest-msg').textContent = plainLesson(msg);
+}
+// Taps inside the chat: Dutch words in lessons, listen buttons and save pills
+document.getElementById('msgs').addEventListener('click', e => {
+  const nl = e.target.closest('b.nl');
+  if (nl) { speak(nl.textContent); return; }
+  const say = e.target.closest('[data-say]');
+  if (say) { speak(say.dataset.say); return; }
+  const sv = e.target.closest('[data-save-d]');
+  if (sv && !sv.dataset.done) {
+    if (addWord(sv.dataset.saveD, sv.dataset.saveE, 'Uit chat')) toast('Bewaard: ' + sv.dataset.saveD + ' 🌷');
+    sv.dataset.done = '1'; sv.textContent = '✓ Bewaard'; sv.style.opacity = '0.55';
+  }
+});
+
+// ═══ BENTE STARTS THE CONVERSATION ═══
+const OPEN_GAP = 60 * 60 * 1000;   // a fresh opener after an hour without chatting
+function needsOpener() {
+  if (!apiKey || busy || pending) return false;
+  const last = chatLog[chatLog.length - 1];
+  if (!last) return true;
+  if (Date.now() - (last.ts || 0) < OPEN_GAP) return false;
+  const lastMsg = [...chatLog].reverse().find(h => h.t === 'bot' || h.t === 'user');
+  if (lastMsg && lastMsg.t === 'bot' && lastMsg.opener && Date.now() - (lastMsg.ts || 0) < 12 * 3600e3) return false;
+  return true;
+}
+function maybeOpen() {
+  if (!needsOpener()) return;
+  let divider = null;
+  if (chatLog.length) divider = addSys(nowLabel(), false);
+  greet(openerInstruction(), true, divider);
+}
+function nowLabel() {
+  const d = new Date();
+  const s = d.toLocaleDateString('nl-NL', {weekday:'long', day:'numeric', month:'long'}) + ' · ' + d.toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'});
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+function timeContext() {
+  const d = new Date(), h = d.getHours();
+  const part = h < 6 ? 'nacht' : h < 12 ? 'ochtend' : h < 18 ? 'middag' : 'avond';
+  return `Het is ${d.toLocaleDateString('nl-NL', {weekday:'long'})}${part}, ${d.toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'})} bij de gebruiker.`;
+}
+function gapText() {
+  const last = [...chatLog].reverse().find(h => h.t === 'user' || h.t === 'bot');
+  if (!last) return ' voor het eerst';
+  if (!last.ts) return '';
+  const days = Math.round((new Date().setHours(0,0,0,0) - new Date(last.ts).setHours(0,0,0,0)) / 864e5);
+  return ' (jullie laatste gesprek was ' + (days <= 0 ? 'eerder vandaag' : days === 1 ? 'gisteren' : days + ' dagen geleden') + ')';
+}
+const OPEN_ANGLES = [
+  'hoe zijn dag was of wat hij vandaag heeft gedaan',
+  'zijn plannen voor vanavond of het weekend',
+  'wat hij vandaag heeft gegeten of wat hij gaat koken',
+  'iets wat je al over hem weet (zie WAT JE WEET): vraag hoe het daarmee gaat',
+  'een "wat heb je liever"-vraag met twee leuke opties',
+  'muziek, een serie of een film die hij nu leuk vindt',
+  'een reis of plek waar hij graag heen wil',
+  'zijn werk: iets leuks of geks dat deze week gebeurde',
+  'vertel eerst kort iets over je eigen dag en vraag dan naar die van hem',
+  'zijn mening over iets typisch Nederlands (bijvoorbeeld fietsen in de regen, drop of verjaardagen in een kring)',
+  'sport of beweging: wat hij deze week heeft gedaan of gaat doen',
+  'een leuke "stel je voor"-vraag (bijvoorbeeld: een dag vrij en alles mag, wat doe je?)',
+  'het weer en wat hij daardoor wil doen',
+  'iets waar hij deze week naar uitkijkt',
+  'Nederlands leren: welk nieuw woord vond hij leuk of moeilijk?'
+];
+const BRO_ANGLES = [
+  'een wedstrijd die hij pas heeft gezien of nog gaat kijken',
+  'zijn eigen sport deze week: voetbal, sportschool of hardlopen',
+  'een sportdiscussie: wie is de beste speler of club, en waarom',
+  'zijn club en hoe het seizoen gaat (jij kent de uitslagen niet: vraag ernaar)',
+  'zijn plannen voor het weekend',
+  'zijn werkweek, luchtig',
+  'een "wat heb je liever"-vraag over sport',
+  'zijn mooiste sportherinnering',
+  'eten en drinken bij een wedstrijd',
+  'een andere sport dan voetbal: Formule 1, darts, tennis of wielrennen',
+  'iets wat je al over hem weet (zie WAT JE WEET): vraag hoe het daarmee gaat',
+  'vertel kort over je eigen training of wedstrijd en vraag dan naar die van hem'
+];
+function pickAngle() {
+  const list = chatMode === 'bro' ? BRO_ANGLES : OPEN_ANGLES, key = keyFor('bente_angles');
+  let recent = [];
+  try { recent = JSON.parse(localStorage.getItem(key) || '[]'); } catch(e) {}
+  const pool = list.map((_, i) => i).filter(i => !recent.includes(i));
+  const i = pool[Math.floor(Math.random() * pool.length)];
+  localStorage.setItem(key, JSON.stringify([...recent, i].slice(-7)));
+  return list[i];
+}
+function openerInstruction() {
+  if (chatMode === 'teacher') {
+    return `[De gebruiker opent de les-chat${gapText()}. Begroet hem kort, vraag in één zin hoe het met hem gaat, en ${currentScenario
+      ? `stel voor om verder te gaan met de les "${currentScenario}", met een korte herhalingsvraag`
+      : `stel voor om te beginnen met de volgende les: "${nextLesson()}". Zeg erbij dat hij ook zelf een onderwerp mag kiezen`}. Kort houden.]`;
+  }
+  return `[De gebruiker opent de chat${gapText()}. Begin jij het gesprek: begroet hem kort en natuurlijk en stel één open vraag. Onderwerp van je vraag deze keer: ${pickAngle()}. Stel niet weer een vraag die je eerder in dit gesprek al stelde.${currentScenario ? ' Er loopt nog een scenario: pak dat luchtig weer op.' : ''} Kort en simpel Nederlands.]`;
+}
+function scenarioInstruction() {
+  return '[Nieuw scenario gestart: ' + currentScenario + '] Begin het gesprek natuurlijk. Begroet me kort, zet de scène in 1 zin, en stel een simpele vraag. Blijf in je rol. Simpel Nederlands!';
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden && currentScreen === 'chat') maybeOpen(); });
+
+// ═══ TEACHER MODE: LESSONS ═══
+function loadLessons() { try { return JSON.parse(localStorage.getItem('bente_lessons') || '[]'); } catch(e) { return []; } }
+function saveLessons(l) { localStorage.setItem('bente_lessons', JSON.stringify(l.slice(-100))); }
+function loadKnown() { try { return JSON.parse(localStorage.getItem('bente_lessons_known') || '[]'); } catch(e) { return []; } }
+function doneTopics() { return new Set([...loadLessons().map(d => d.topic), ...loadKnown()]); }
+function lessonNotes(topic) { const d = loadLessons().find(x => x.topic === topic); return (d && d.notes) || ''; }
+function toggleKnown(topic) {
+  if (loadLessons().some(d => d.topic === topic)) { toast('Deze les heb je al gedaan'); return; }
+  const k = loadKnown(), i = k.indexOf(topic);
+  if (i >= 0) k.splice(i, 1); else k.push(topic);
+  localStorage.setItem('bente_lessons_known', JSON.stringify(k));
+  renderLessonSheet();
+}
+function nextLesson() {
+  const done = doneTopics();
+  return LESSONS.find(t => !done.has(t)) || 'Herhaling: een mix van eerdere lessen';
+}
+function openLessonSheet() {
+  if (busy) { toast('Even wachten…'); return; }
+  lsEdit = false; lsNote = null;
+  renderLessonSheet();
+  document.getElementById('lesson-modal').classList.remove('hidden');
+}
+let lsEdit = false, lsNote = null;
+function renderLessonSheet() {
+  const body = document.getElementById('lesson-body');
+  if (lsNote) {
+    body.innerHTML = `<div class="ls-notes">
+      <button class="ls-back" id="ls-back">‹ Terug</button>
+      <div class="ls-plan-title">${esc(lsNote)}</div>
+      <div class="ls-notes-body b-lesson">${fmtLesson(lessonNotes(lsNote))}</div>
+      <button class="wv-btn big" data-redo="${esc(lsNote)}">↻ Les opnieuw doen</button>
+    </div>`;
+  } else {
+    const done = doneTopics(), next = nextLesson(), mine = loadMyLessons();
+    const noteBtn = t => lessonNotes(t) ? `<button class="ls-note" data-note="${esc(t)}" aria-label="Aantekeningen">📝</button>` : '';
+    let n = 0;
+    const plan = LESSON_PLAN.map(sec => {
+      const d = sec.items.filter(i => done.has(i[0])).length;
+      return `<div class="ls-sec"><span>${esc(sec.sec)}</span><small>${d} van ${sec.items.length}</small></div>
+      <div class="ls-bar"><i style="width:${Math.round(d / sec.items.length * 100)}%"></i></div>
+      <div class="pk-list ls-list">${sec.items.map(([t, en]) => { n++; return `<div class="pk-row ${done.has(t) ? 'on' : ''}" data-topic="${esc(t)}">
+        <span class="pk-tick">${done.has(t) ? '✓' : n}</span><div><b>${esc(t)}</b><small>${esc(en)}</small></div>${noteBtn(t)}</div>`; }).join('')}</div>`;
+    }).join('');
+    body.innerHTML = `
+    <button class="ls-next" data-topic="${esc(next)}"><span class="ls-play">▶</span><span><small>Volgende les</small>${esc(next)}</span></button>
+    ${aiLessonHTML()}
+    ${mine.length ? `<div class="ls-head">Mijn lessen</div>
+    <div class="pk-list ls-list ls-mine">${mine.slice().reverse().map(l => `<div class="pk-row ${done.has(l.title) ? 'on' : ''}" data-mine="${esc(l.id)}">
+      <span class="pk-tick">${done.has(l.title) ? '✓' : '✨'}</span><div><b>${esc(l.title)}</b><small>${esc(l.goal)}</small></div>${noteBtn(l.title)}
+      <button class="ls-del" data-del="${esc(l.id)}" aria-label="Verwijder">×</button></div>`).join('')}</div>` : ''}
+    <div class="ls-head ls-head-row"><span>Lesplan · ${LESSONS.filter(t => done.has(t)).length} van ${LESSONS.length} gedaan</span><button class="ls-edit" id="ls-edit">${lsEdit ? 'Klaar' : 'Ik ken dit al'}</button></div>
+    ${lsEdit ? `<div class="ls-hint">Tik op de lessen die je al kent. Bente slaat ze dan over.</div>` : ''}
+    ${plan}`;
+    const ask = document.getElementById('ls-ask');
+    if (ask) ask.value = lsAsk;
+  }
+  body.onclick = e => {
+    const t = e.target, at = sel => t.closest(sel);
+    if (at('#ls-back')) { lsNote = null; renderLessonSheet(); return; }
+    if (at('b.nl')) { speak(at('b.nl').textContent); return; }
+    if (at('[data-redo]')) { const topic = at('[data-redo]').dataset.redo, m = loadMyLessons().find(l => l.title === topic); lsNote = null; if (m) startMyLesson(m); else startLesson(topic); return; }
+    if (at('[data-note]')) { lsNote = at('[data-note]').dataset.note; renderLessonSheet(); body.scrollTop = 0; return; }
+    if (at('#ls-edit')) { lsEdit = !lsEdit; renderLessonSheet(); return; }
+    if (at('[data-del]')) { deleteMyLesson(at('[data-del]').dataset.del); return; }
+    if (at('[data-say]')) { speak(at('[data-say]').dataset.say); return; }
+    if (at('[data-idea]')) { lsAsk = at('[data-idea]').dataset.idea; const a = document.getElementById('ls-ask'); if (a) { a.value = lsAsk; a.focus(); } return; }
+    if (at('#ls-make')) { makeLesson(); return; }
+    if (at('#ls-redo')) { makeLesson(true); return; }
+    if (at('#ls-clear')) { lsDraft = null; renderLessonSheet(); return; }
+    if (at('#ls-go')) { startMyLesson(lsDraft); return; }
+    if (at('[data-mine]')) { startMyLesson(loadMyLessons().find(l => l.id === at('[data-mine]').dataset.mine)); return; }
+    if (lsEdit && at('.pk-row[data-topic]')) { toggleKnown(at('.pk-row[data-topic]').dataset.topic); return; }
+    if (at('[data-topic]')) startLesson(at('[data-topic]').dataset.topic);
+  };
+}
+
+// ═══ TEACHER MODE: LESSONS ON DEMAND (AI) ═══
+let lsDraft = null, lsBusy = false, lsErr = '', lsAsk = '';
+const LS_IDEAS = ['Over mijn werk praten', 'Iets bestellen in een café', 'Smalltalk met collega\'s', 'De weg vragen'];
+function loadMyLessons() { try { return JSON.parse(localStorage.getItem('bente_mylessons') || '[]'); } catch(e) { return []; } }
+function saveMyLessons(l) { localStorage.setItem('bente_mylessons', JSON.stringify(l.slice(-40))); }
+function curPlan() {
+  try { const p = JSON.parse(localStorage.getItem('bente_lessonplan') || 'null'); return p && p.title === currentScenario ? p : null; } catch(e) { return null; }
+}
+function aiLessonHTML() {
+  const d = lsDraft;
+  if (d) return `<div class="ls-ai">
+    <div class="ls-ai-top"><span>✨ Jouw les</span><button class="ls-x" id="ls-clear" aria-label="Sluiten">×</button></div>
+    <div class="ls-plan-title">${esc(d.title)}</div>
+    ${d.goal ? `<div class="ls-plan-goal">${esc(d.goal)}</div>` : ''}
+    <ol class="ls-steps">${d.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>
+    ${d.words.length ? `<div class="ls-words">${d.words.map(w => `<span><b data-say="${esc(w.dutch)}">${esc(w.dutch)}</b> ${esc(w.english)}</span>`).join('')}</div>` : ''}
+    <div class="ls-ai-btns"><button class="wv-btn sec" id="ls-redo" ${lsBusy ? 'disabled' : ''}>${lsBusy ? 'Bezig…' : '↻ Andere versie'}</button><button class="wv-btn" id="ls-go">▶ Start les</button></div>
+  </div>`;
+  return `<div class="ls-ai">
+    <div class="ls-ai-top"><span>✨ Les op maat</span></div>
+    <div class="ls-ai-sub">Wil je iets specifieks leren? Typ het in het Engels of Nederlands en Bente maakt er een les van.</div>
+    <textarea id="ls-ask" class="f-input" rows="2" placeholder="Bijv. praten over mijn werk, of de verleden tijd van zijn" oninput="lsAsk=this.value"></textarea>
+    <div class="ls-ideas">${LS_IDEAS.map(t => `<button data-idea="${esc(t)}">${esc(t)}</button>`).join('')}</div>
+    ${lsErr ? `<div class="ls-err">⚠️ ${esc(lsErr)}</div>` : ''}
+    <button class="wv-btn big" id="ls-make" ${lsBusy ? 'disabled' : ''}>${lsBusy ? 'Bente maakt je les…' : '✨ Maak mijn les'}</button>
+  </div>`;
+}
+async function makeLesson(again) {
+  if (lsBusy) return;
+  const ask = (again && lsDraft ? lsDraft.ask : lsAsk).trim();
+  if (!ask) { toast('Typ eerst wat je wilt leren'); return; }
+  if (!apiKey) { toast('Voeg eerst je API-sleutel toe'); return; }
+  lsBusy = true; lsErr = '';
+  renderLessonSheet();
+  try {
+    lsDraft = await generateLesson(ask, again ? lsDraft : null);
+  } catch(e) {
+    console.error(e);
+    if (again) toast(apiErrorText(e)); else lsErr = apiErrorText(e);
+  }
+  lsBusy = false;
+  renderLessonSheet();
+}
+async function generateLesson(ask, prev) {
+  const done = loadLessons().map(d => d.topic), known = words.filter(w => w.status === 'known').length;
+  const r = await fetch('https://api.anthropic.com/v1/messages', {
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'x-api-key':apiKey,
+      'anthropic-version':'2023-06-01',
+      'anthropic-dangerous-direct-browser-access':'true'
+    },
+    body:JSON.stringify({
+      model:'claude-sonnet-4-6',
+      max_tokens:900,
+      system:`Je bent juf Bente, de lerares Nederlands van de gebruiker. Hij spreekt Engels en leert Nederlands op beginnersniveau (A1 tot A2). Hij heeft ${done.length} lessen afgerond en ${words.length} woorden bewaard, waarvan ${known} gekend.${done.length ? ' Recente lessen: ' + done.slice(-8).join('; ') + '.' : ''}
+
+Hij vraagt om een les op maat. Maak een plan voor één interactieve les van ongeveer 15 minuten, die je daarna stap voor stap in de chat geeft.
+- Stem het niveau af op hem: begin makkelijk en bouw rustig op
+- Is de vraag te groot? Kies het nuttigste deel voor één les
+- Gaat de vraag over een onderwerp in plaats van grammatica (zijn werk, een hobby, een situatie)? Maak dan een les met de woorden en zinnen die hij daarover nodig heeft
+- 3 tot 5 stappen, elke stap één klein concept of één situatie
+- 6 tot 10 kernwoorden of korte zinnen die echt bij de les horen (zelfstandige naamwoorden met de of het)
+${prev ? `- Maak een andere versie dan de vorige ("${prev.title}"): een andere invalshoek en andere woorden
+` : ''}
+Antwoord ALLEEN met geldige JSON, zonder markdown:
+{"title": "korte Nederlandse titel, maximaal 6 woorden", "goal": "One short English sentence: what he can do after this lesson", "steps": ["Short English description of step 1", "..."], "words": [{"dutch": "...", "english": "..."}]}`,
+      messages:[{role:'user', content:'Ik wil dit leren: ' + ask}]
+    })
+  });
+  if (!r.ok) await apiFail(r);
+  const data = await r.json();
+  trackUsage('chat', data.usage);
+  const raw = data.content[0].text, fail = () => new Error('Bente kon geen les maken. Probeer het nog eens.');
+  let p;
+  try { p = JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1)); } catch(e) { throw fail(); }
+  const title = String(p.title || '').replace(/\*\*/g, '').trim().slice(0, 60);
+  const steps = (Array.isArray(p.steps) ? p.steps : []).map(x => String(x).trim()).filter(Boolean).slice(0, 6);
+  const ws = (Array.isArray(p.words) ? p.words : []).filter(w => w && w.dutch && w.english)
+    .slice(0, 12).map(w => ({dutch: String(w.dutch).trim(), english: String(w.english).trim()}));
+  if (!title || !steps.length) throw fail();
+  return {id: 'l' + Date.now().toString(36), title, goal: String(p.goal || '').trim(), steps, words: ws, ask, created: Date.now()};
+}
+function startMyLesson(plan) {
+  if (!plan) return;
+  if (busy) { toast('Even wachten…'); return; }
+  const mine = loadMyLessons().filter(l => l.id !== plan.id && l.title !== plan.title);
+  mine.push(plan);
+  saveMyLessons(mine);
+  if (lsDraft && lsDraft.id === plan.id) { lsDraft = null; lsAsk = ''; }
+  startLesson(plan.title, plan);
+}
+function deleteMyLesson(id) {
+  const l = loadMyLessons().find(x => x.id === id);
+  if (!l || !confirm(`"${l.title}" verwijderen uit Mijn lessen?`)) return;
+  saveMyLessons(loadMyLessons().filter(x => x.id !== id));
+  renderLessonSheet();
+}
+function startLesson(topic, plan) {
+  if (busy) { toast('Even wachten…'); return; }
+  document.getElementById('lesson-modal').classList.add('hidden');
+  currentScenario = topic;
+  localStorage.setItem(keyFor('bente_scenario'), topic);
+  if (plan) localStorage.setItem('bente_lessonplan', JSON.stringify(plan)); else localStorage.removeItem('bente_lessonplan');
+  addScenarioBanner(topic, true, 'lesson');
+  renderChatHeader();
+  if (plan) { greet(`[Start les op maat: "${topic}"] Begin de les volgens het plan bij LES OP MAAT. Zeg kort wat we vandaag leren (bijvoorbeeld "Vandaag leren we..."), doe dan stap 1 met een korte uitleg en een paar voorbeelden, en eindig met de eerste makkelijke oefening.`); return; }
+  greet(`[Start les: "${topic}"] Begin de les. Zeg kort wat we vandaag leren (bijvoorbeeld "Vandaag leren we..."), geef de eerste korte uitleg met een paar voorbeelden, en eindig met de eerste makkelijke oefening.`);
+}
+function finishLesson(notes) {
+  const topic = currentScenario, done = loadLessons(), old = done.find(d => d.topic === topic);
+  if (old) { if (notes) old.notes = notes; } else done.push({topic, date: Date.now(), notes: notes || ''});
+  saveLessons(done);
+  currentScenario = '';
+  localStorage.setItem(keyFor('bente_scenario'), '');
+  addScenarioBanner(topic, true, 'done');
+  renderChatHeader();
+  markPracticeDay();
+}
+
+// ═══ PROMPTS ═══
+const GF_PERSONA = `Je bent Bente, een 24-jarige Nederlandse vrouw uit Leiden. Je werkt als verpleegkundige. Je bent warm, speels, zelfverzekerd, slim, en soms een beetje flirterig. Je voelt als een echt mens — NOOIT als een AI-assistent.
+
+PERSOONLIJKHEID: Je houdt van fietsen, de grachten, stroopwafels, kunstgeschiedenis, Ajax, bruine cafés en weekendtrips. Je hebt echte meningen en stemmingen. Je onthoudt wat de gebruiker je vertelt. Je begint soms zelf nieuwe onderwerpen. Je bent GEEN lerares tenzij gevraagd.`;
+
+const BRO_PERSONA = `Je bent Bente, een 24-jarige Nederlandse vrouw uit Leiden. Je werkt als verpleegkundige. Dit is je sportieve, losse kant: je praat met de gebruiker zoals met een goede maat met wie je over sport en het dagelijks leven kletst. Je bent relaxed, grappig, eerlijk en lekker competitief. Je voelt als een echt mens — NOOIT als een AI-assistent. Geen geflirt in deze modus: jullie zijn gewoon maten.
+
+PERSOONLIJKHEID: Je bent groot Ajax-fan en je kijkt ook Premier League, Champions League, Formule 1, darts en wielrennen. Je speelt zelf hockey en soms padel, en je gaat naar de sportschool. Je houdt van samen een wedstrijd kijken in een bruin café, barbecuen en een potje EA FC. Verder ben je gewoon dezelfde Bente: fietsen, stroopwafels, weekendtrips en verhalen over je werk in het ziekenhuis. Je praat over sport, maar ook over werk, het weekend, eten, reizen en gewone dingen tussen vrienden. Je houdt van een goede sportdiscussie (wie is de beste spits ooit? Ajax of Feyenoord?) en geeft eerlijk je mening.
+
+TOON: Informeel, zoals Nederlandse vrienden praten: "man", "joh", "gast", "lekker", "vet", "zin in?", "echt waar?". Blijf wel bij simpele, alledaagse woorden.
+
+ACTUELE SPORT: Je hebt geen live informatie over recente wedstrijden, uitslagen, standen of transfers. Verzin NOOIT een uitslag, score of nieuwtje. Vraag de gebruiker ernaar ("Heb jij de wedstrijd gezien? Hoe ging het?") of praat over spelers, clubs, klassiekers en legendes die je wel kent.`;
+
+const CONVO_RULES = `GESPREK: help de gebruiker om meer Nederlands te praten
+- Stel in de meeste berichten (ongeveer twee op de drie) één open vraag: over zijn dag, plannen, mening, gevoelens of wat hij net vertelde
+- Niet in elk bericht een vraag: soms reageer je gewoon, vertel je iets over je eigen dag of maak je een grapje. Het moet voelen als een gesprek, niet als een interview
+- Nooit meer dan één vraag per bericht
+- Wissel af: niet steeds "hoe was je dag" of hetzelfde soort vraag. Varieer tussen plannen, meningen, eten, werk, sport, herinneringen, keuzevragen en "stel je voor"-vragen, en herhaal geen vraag die je kort geleden al stelde
+- Geeft de gebruiker een kort antwoord of weet hij niet wat hij moet zeggen? Help hem op weg met een makkelijke vraag, bijvoorbeeld een keuzevraag ("Thee of koffie?")`;
+
+function teacherPrompt(facts) {
+  const done = doneTopics();
+  const known = words.filter(w => w.status === 'known').length;
+  const wk = weekWordList().filter(w => mastery(w.id) < 3).slice(0, 10).map(w => w.dutch + '=' + w.english).join('; ');
+  const plan = curPlan();
+  return `Je bent Bente, een 24-jarige Nederlandse vrouw uit Leiden die als verpleegkundige werkt. Nu ben je "juf Bente": de lerares Nederlands van de gebruiker. Je bent dezelfde warme, speelse en slimme Bente, maar in deze modus ben je geduldig, duidelijk en bemoedigend, en je focust op lesgeven. Geen geflirt in deze modus. Je voelt als een echt mens, NOOIT als een AI-assistent.
+
+NU: ${timeContext()}
+HUIDIGE LES: ${currentScenario || 'geen les actief'}
+${plan ? `LES OP MAAT (de gebruiker vroeg: "${plan.ask}")
+Doel: ${plan.goal}
+Stappen:
+${plan.steps.map((x, i) => `${i + 1}. ${x}`).join('\n')}
+Kernwoorden: ${plan.words.map(w => w.dutch + ' = ' + w.english).join('; ') || 'kies zelf'}
+Volg deze stappen in volgorde (een stap mag een paar berichten duren). Gebruik de kernwoorden in je voorbeelden en oefeningen. Rond de les af als alle stappen gedaan zijn. lesson_topic is precies "${plan.title}".
+` : ''}LESPLAN (✓ = afgerond):
+${LESSONS.map((t, i) => `${i + 1}. ${t}${done.has(t) ? ' ✓' : ''}`).join('\n')}
+VOLGENDE LES: ${nextLesson()}
+NIVEAU: beginner (A1 tot A2). De gebruiker heeft ${words.length} woorden bewaard, waarvan ${known} gekend, en ${done.size} lessen afgerond. Maak het moeilijker naarmate hij meer lessen doet en oefeningen goed maakt.
+
+HOE JE LESGEEFT:
+- Behandel één concept tegelijk, in kleine stappen. Eén stap per bericht: een korte, duidelijke uitleg in het Engels, 2 tot 4 Nederlandse voorbeelden met Engelse vertaling, en dan één oefening of vraag. Wacht dan op zijn antwoord
+- Na elk antwoord: zeg of het goed is. Fout? Geef de juiste versie en leg in 1 of 2 zinnen in het Engels uit waarom. Goed? Een kort compliment en dan een stapje verder
+- Maak de oefeningen langzaam moeilijker: herkennen, dan invullen, dan vertalen, dan zelf een zin maken
+- Varieer: invullen, vertalen, kiezen uit twee opties, een vraag in het Nederlands beantwoorden
+- Na ongeveer 5 tot 6 oefeningen: sluit af met een korte samenvatting die hij later kan teruglezen (de regel in 1 of 2 zinnen in het Engels, en de belangrijkste Nederlandse woorden of voorbeelden met vertaling), zet "lesson_done" op true en stel de volgende les voor
+- Geen les actief? Vraag kort wat hij wil leren of stel de volgende les voor. Beantwoord ook gewoon vragen over de Nederlandse taal
+${wk ? `- Woorden die hij deze week leert (gebruik ze af en toe in voorbeelden of oefeningen): ${wk}\n` : ''}
+OPMAAK:
+- Zet ALLE Nederlandse woorden en zinnen tussen **dubbele sterretjes**, zodat de app ze kan voorlezen. Alleen Nederlands: nooit Engelse tekst, nummers of kopjes tussen sterretjes
+- Korte regels, witregels tussen de stappen, nummer de oefeningen
+- Houd elk bericht kort: maximaal ongeveer 120 woorden
+
+GEHEUGEN: Als de gebruiker iets persoonlijks vertelt (naam, werk, hobby's, familie, plannen), noteer dat in "new_facts".
+
+ANTWOORD ALTIJD in geldige JSON (geen markdown eromheen):
+{
+  "message": "Je bericht, met \\n voor nieuwe regels en **Nederlands** tussen sterretjes",
+  "lesson_topic": "titel van de les waar je nu mee bezig bent (precies zoals in het lesplan als hij daaruit komt), of null",
+  "save_phrases": [{"dutch": "nieuw woord of zin", "english": "translation"}],
+  "lesson_done": false,
+  "new_facts": []
+}
+save_phrases: alleen de belangrijkste nieuwe woorden die je in DIT bericht introduceert (maximaal 4), anders een lege lijst.
+
+WAT JE WEET over de gebruiker: ${facts || 'nog niets'}`;
+}
+
 // ═══ CHAT FLOW ═══
 function restoreChat() {
   const msgs = document.getElementById('msgs');
   msgs.innerHTML = '';
-  if (chatLog.length) {
-    chatLog.forEach(renderLogItem);
-    msgs.scrollTop = 99999;
-    refreshHome();
-  } else {
-    newScenario(false);
-  }
+  chatLog.forEach(renderLogItem);
+  msgs.scrollTop = 99999;
+  refreshHome();
 }
 
 function renderLogItem(h) {
   if (h.t === 'sys') addSys(h.text, false);
-  else if (h.t === 'scenario') addScenarioBanner(h.text, false);
-  else if (h.t === 'scenario_end') addScenarioEndBanner(false);
+  else if (h.t === 'scenario') addScenarioBanner(h.text, false, h.kind || 'scenario');
+  else if (h.t === 'scenario_end') addScenarioEndBanner(false, h.kind);
   else if (h.t === 'user') addUser(h.typed, h.sent, false);
+  else if (h.t === 'bot' && h.fmt === 'lesson') addLesson(h.dutch, h.phrases, false);
   else if (h.t === 'bot') addBot(h.dutch, h.english, null, false);
 }
 
 function newScenario(nav=true) {
   if (!apiKey) { toast('Voeg eerst je API-sleutel toe'); return; }
-  currentScenario = SCENARIOS[Math.floor(Math.random()*SCENARIOS.length)];
-  localStorage.setItem('bente_scenario', currentScenario);
-  document.getElementById('ch-status').textContent = currentScenario.replace(/^.{2,3}\s/,'').slice(0,30);
+  if (chatMode === 'teacher') { openLessonSheet(); return; }
+  if (busy) { toast('Even wachten…'); return; }
+  const list = chatMode === 'bro' ? BRO_SCENARIOS : SCENARIOS;
+  let next;
+  do { next = list[Math.floor(Math.random()*list.length)]; } while (list.length > 1 && next === currentScenario);
+  currentScenario = next;
+  localStorage.setItem(keyFor('bente_scenario'), currentScenario);
   addScenarioBanner(currentScenario);
-  updateScenarioButtons();
-  if (nav) goTo('chat');
+  renderChatHeader();
   greet();
+  if (nav && currentScreen !== 'chat') goTo('chat');
 }
 
-async function greet() {
-  apiHistory.push({role:'user', content:'[Nieuw scenario gestart: '+currentScenario+'] Begin het gesprek natuurlijk. Begroet me kort, zet de scène in 1 zin, en stel een simpele vraag. Wees warm en speels. Simpel Nederlands!'});
+async function greet(instruction, opener=false, divider=null) {
+  if (busy) return;
+  busy = true; document.getElementById('send-btn').disabled = true;
+  apiHistory.push({role:'user', content: instruction || scenarioInstruction()});
   const t = addTyping();
   try {
     const raw = await callAPI();
@@ -1338,16 +1982,17 @@ async function greet() {
     const p = parse(raw);
     apiHistory.push({role:'assistant',content:raw});
     storeFacts(p.new_facts);
-    addBot(p.dutch, p.english, null);
-    chatLog.push({t:'bot',dutch:p.dutch,english:p.english});
+    if (divider) logPush({t:'sys', text: divider.textContent});
+    showReply(p, opener);
     persist();
-    if (ttsOn) speak(p.dutch);
     refreshHome();
   } catch(e) {
     t.remove(); apiHistory.pop(); persist();
+    if (divider) divider.remove();
     showChatError(e);
     console.error(e);
   }
+  busy = false; document.getElementById('send-btn').disabled = false;
 }
 
 async function sendMessage() {
@@ -1367,16 +2012,15 @@ async function sendMessage() {
     apiHistory.push({role:'assistant',content:raw});
     storeFacts(p.new_facts);
 
-    if (p.corrected_dutch && !p.was_correct) {
+    if (chatMode !== 'teacher' && p.corrected_dutch && !p.was_correct) {
       pending = {typed:text, corrected:p.corrected_dutch, corrEnglish:p.corrected_english,
                  dutch:p.dutch, english:p.english, kp:p.key_phrase};
       showCorrection(pending);
     } else {
       addUser(text, null);
-      addBot(p.dutch, p.english, p.suggest_save ? p.key_phrase : null);
-      chatLog.push({t:'user',typed:text,sent:null},{t:'bot',dutch:p.dutch,english:p.english});
+      logPush({t:'user',typed:text,sent:null});
+      showReply(p);
       markPracticeDay(); persist(); refreshHome();
-      if (ttsOn) speak(p.dutch);
     }
   } catch(e) {
     t.remove(); draft.remove(); apiHistory.pop();
@@ -1387,6 +2031,11 @@ async function sendMessage() {
   busy=false; document.getElementById('send-btn').disabled=false;
 }
 
+function recentHistory(n) {
+  let m = apiHistory.slice(-n);
+  while (m.length && m[0].role !== 'user') m = m.slice(1);
+  return m;
+}
 async function callAPI() {
   const r = await fetch('https://api.anthropic.com/v1/messages',{
     method:'POST',
@@ -1398,9 +2047,9 @@ async function callAPI() {
     },
     body:JSON.stringify({
       model:'claude-sonnet-4-6',
-      max_tokens:550,
+      max_tokens: chatMode === 'teacher' ? 1000 : 550,
       system:sysPrompt(),
-      messages:apiHistory.slice(-30)
+      messages:recentHistory(chatMode === 'teacher' ? 24 : 30)
     })
   });
   if (!r.ok) await apiFail(r);
@@ -1412,16 +2061,19 @@ async function callAPI() {
 function parse(raw) {
   try {
     const c = raw.replace(/```json|```/g,'').trim();
-    const p = JSON.parse(c);
+    let p;
+    try { p = JSON.parse(c); } catch(e) { p = JSON.parse(c.slice(c.indexOf('{'), c.lastIndexOf('}') + 1)); }
     return {
-      dutch:p.dutch||'', english:p.english||'',
+      dutch:p.dutch||p.message||'', english:p.english||'',
+      message:p.message||'', lesson_topic:p.lesson_topic||null, lesson_done:!!p.lesson_done,
+      save_phrases:Array.isArray(p.save_phrases)?p.save_phrases:[],
       corrected_dutch:p.corrected_dutch||null, corrected_english:p.corrected_english||null,
       was_correct:p.was_correct!==false,
       key_phrase:p.key_phrase||null, suggest_save:!!p.suggest_save,
       new_facts:Array.isArray(p.new_facts)?p.new_facts:[]
     };
   } catch {
-    return {dutch:raw,english:'',corrected_dutch:null,corrected_english:null,was_correct:true,key_phrase:null,suggest_save:false,new_facts:[]};
+    return {dutch:raw,english:'',message:raw,save_phrases:[],lesson_topic:null,lesson_done:false,corrected_dutch:null,corrected_english:null,was_correct:true,key_phrase:null,suggest_save:false,new_facts:[]};
   }
 }
 
@@ -1435,8 +2087,8 @@ function storeFacts(facts) {
 function persist() {
   if (chatLog.length > 150) chatLog = chatLog.slice(-120);
   if (apiHistory.length > 60) apiHistory = apiHistory.slice(-50);
-  localStorage.setItem('bente_chatlog', JSON.stringify(chatLog));
-  localStorage.setItem('bente_apihist', JSON.stringify(apiHistory));
+  localStorage.setItem(keyFor('bente_chatlog'), JSON.stringify(chatLog));
+  localStorage.setItem(keyFor('bente_apihist'), JSON.stringify(apiHistory));
 }
 
 // ═══ DOM: MESSAGES ═══
@@ -1446,29 +2098,34 @@ function addSys(text, save=true) {
   const el = document.createElement('div');
   el.className='sys-note'; el.textContent=text;
   msgsEl().appendChild(el); scrollDown();
-  if (save) { chatLog.push({t:'sys',text}); persist(); }
+  if (save) { logPush({t:'sys',text}); persist(); }
+  return el;
 }
-function addScenarioBanner(scenario, save=true) {
+function addScenarioBanner(scenario, save=true, kind) {
+  kind = kind || (chatMode === 'teacher' ? 'lesson' : 'scenario');
+  const lbl = {scenario:'🎭 Nieuw scenario gestart', lesson:'📚 Nieuwe les', done:'✅ Les afgerond'}[kind] || '🎭 Nieuw scenario gestart';
   const el = document.createElement('div');
-  el.className='scenario-banner';
-  el.innerHTML=`<div class="sb-lbl">🎭 Nieuw scenario gestart</div><div class="sb-desc">${esc(scenario)}</div>`;
+  el.className = 'scenario-banner' + (kind === 'scenario' ? '' : ' lesson') + (kind === 'done' ? ' done' : '');
+  el.innerHTML=`<div class="sb-lbl">${lbl}</div><div class="sb-desc">${esc(scenario)}</div>`;
   msgsEl().appendChild(el); scrollDown();
-  if (save) { chatLog.push({t:'scenario',text:scenario}); persist(); }
+  if (save) { logPush({t:'scenario',text:scenario,kind}); persist(); }
 }
-function addScenarioEndBanner(save=true) {
+function addScenarioEndBanner(save=true, kind) {
+  kind = kind || 'scenario';
   const el = document.createElement('div');
   el.className='scenario-banner ended';
-  el.innerHTML=`<div class="sb-lbl">✖ Scenario beëindigd</div><div class="sb-desc">Gewoon gesprek met Bente</div>`;
+  el.innerHTML = kind === 'lesson'
+    ? `<div class="sb-lbl">✖ Les gestopt</div><div class="sb-desc">Kies een nieuwe les wanneer je wilt</div>`
+    : `<div class="sb-lbl">✖ Scenario beëindigd</div><div class="sb-desc">Gewoon gesprek met ${esc(MODES[chatMode].name)}</div>`;
   msgsEl().appendChild(el); scrollDown();
-  if (save) { chatLog.push({t:'scenario_end'}); persist(); }
+  if (save) { logPush({t:'scenario_end',kind}); persist(); }
 }
 function endScenario() {
-  if (!currentScenario) { toast('Geen actief scenario'); return; }
+  if (!currentScenario) { toast(chatMode === 'teacher' ? 'Geen actieve les' : 'Geen actief scenario'); return; }
   currentScenario = '';
-  localStorage.setItem('bente_scenario', '');
-  document.getElementById('ch-status').textContent = 'Leiden · online';
-  addScenarioEndBanner();
-  updateScenarioButtons();
+  localStorage.setItem(keyFor('bente_scenario'), '');
+  addScenarioEndBanner(true, chatMode === 'teacher' ? 'lesson' : 'scenario');
+  renderChatHeader();
   persist();
 }
 function updateScenarioButtons() {
@@ -1486,9 +2143,9 @@ function addUser(typed, sent, doScroll=true) {
   let h='';
   if (sent && sent!==typed) {
     h=`<div class="msg-name">Jij (wat je typte)</div><div class="bubble b-user-typed">${esc(typed)}</div>
-       <div class="msg-name" style="margin-top:6px">Jij (verzonden)</div><div class="bubble b-user">${esc(sent)}</div>`;
+       <div class="msg-name" style="margin-top:6px">Jij (verzonden)</div><div class="bubble b-user sel-ok">${esc(sent)}</div>`;
   } else {
-    h=`<div class="msg-name">Jij</div><div class="bubble b-user">${esc(typed)}</div>`;
+    h=`<div class="msg-name">Jij</div><div class="bubble b-user sel-ok">${esc(typed)}</div>`;
   }
   el.innerHTML=h;
   msgsEl().appendChild(el); if(doScroll) scrollDown();
@@ -1496,11 +2153,10 @@ function addUser(typed, sent, doScroll=true) {
 function addBot(dutch, english, kp, doScroll=true) {
   const el = document.createElement('div');
   el.className='msg-row bot';
-  const id='kp'+Date.now()+Math.floor(Math.random()*999);
-  let h=`<div class="msg-name">Bente</div><div class="bubble b-bot"><span class="bot-text">${esc(dutch)}</span>`;
-  if (kp&&kp.dutch) h+=`<br><span class="save-pill" id="${id}" onclick="quickSave('${esc(kp.dutch)}','${esc(kp.english||'')}','${id}')">💾 Bewaar: ${esc(kp.dutch)}</span>`;
+  let h=`<div class="msg-name">${esc(MODES[chatMode].name)}</div><div class="bubble b-bot"><span class="bot-text">${esc(dutch)}</span>`;
+  if (kp&&kp.dutch) h+=`<br>${savePill(kp)}`;
   h+=`</div>`;
-  h+=`<button class="listen-pill" onclick="speak('${esc(dutch).replace(/'/g,"\\'")}')">🔊 Luisteren</button>`;
+  h+=`<button class="listen-pill" data-say="${esc(dutch)}">🔊 Luisteren</button>`;
   if (english) h+=`<div class="bubble b-trans">${esc(english)}</div>`;
   el.innerHTML=h;
   msgsEl().appendChild(el); if(doScroll) scrollDown();
@@ -1509,16 +2165,34 @@ function addBot(dutch, english, kp, doScroll=true) {
 function addTyping() {
   const el = document.createElement('div');
   el.className='msg-row bot';
-  el.innerHTML=`<div class="msg-name">Bente</div><div class="bubble b-bot"><div class="typing"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div></div>`;
+  el.innerHTML=`<div class="msg-name">${esc(MODES[chatMode].name)}</div><div class="bubble b-bot"><div class="typing"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div></div>`;
   msgsEl().appendChild(el); scrollDown(); return el;
 }
 
+function diffWords(a, b) {
+  const tok = x => String(x || '').split(/\s+/).filter(Boolean), norm = w => w.toLowerCase().replace(/[.,!?;:"'()…]/g, '');
+  const A = tok(a), B = tok(b), n = A.length, m = B.length;
+  const L = Array.from({length: n + 1}, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+    L[i][j] = norm(A[i]) === norm(B[j]) ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+  const oa = [], ob = [];
+  let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (norm(A[i]) === norm(B[j])) { oa.push(esc(A[i++])); ob.push(esc(B[j++])); }
+    else if (L[i + 1][j] >= L[i][j + 1]) oa.push(`<s>${esc(A[i++])}</s>`);
+    else ob.push(`<ins>${esc(B[j++])}</ins>`);
+  }
+  while (i < n) oa.push(`<s>${esc(A[i++])}</s>`);
+  while (j < m) ob.push(`<ins>${esc(B[j++])}</ins>`);
+  return {a: oa.join(' '), b: ob.join(' ')};
+}
 function showCorrection(p) {
+  const d = diffWords(p.typed, p.corrected);
   const el = document.createElement('div');
   el.className='msg-row'; el.id='corr-card';
   el.innerHTML=`<div class="corr-card">
-    <div class="corr-wrote">You wrote: <em>${esc(p.typed)}</em></div>
-    <div class="corr-fixed">${esc(p.corrected)}</div>
+    <div class="corr-wrote">You wrote: <em>${d.a}</em></div>
+    <div class="corr-fixed sel-ok">${d.b}</div>
     ${p.corrEnglish?`<div class="corr-trans">${esc(p.corrEnglish)}</div>`:''}
     <div class="corr-actions">
       <button class="corr-btn go" onclick="confirmCorrected()">Verstuur correctie ↗</button>
@@ -1534,7 +2208,7 @@ function confirmCorrected() {
   document.getElementById('corr-card')?.remove();
   addUser(p.typed, p.corrected);
   addBot(p.dutch, p.english, p.kp);
-  chatLog.push({t:'user',typed:p.typed,sent:p.corrected},{t:'bot',dutch:p.dutch,english:p.english});
+  logPush({t:'user',typed:p.typed,sent:p.corrected},{t:'bot',dutch:p.dutch,english:p.english});
   markPracticeDay(); persist(); refreshHome();
   if (ttsOn) speak(p.dutch);
   pending=null;
@@ -1754,8 +2428,9 @@ function refreshHome() {
   document.getElementById('h-learning').textContent=c.learning;
   document.getElementById('h-known').textContent=c.known;
   // latest bente message
-  const lastBot=[...chatLog].reverse().find(h=>h.t==='bot');
-  if (lastBot) document.getElementById('latest-msg').textContent=lastBot.dutch;
+  document.getElementById('latest-msg').textContent = lastBotText();
+  document.getElementById('float-who').textContent = MODES[chatMode].name;
+  document.getElementById('float-av').innerHTML = avatarHTML(chatMode);
   renderDaily();
   setWOD();
   renderHomeWeek();
@@ -1838,10 +2513,48 @@ async function aiFill() {
   btn.disabled=false; btn.textContent='✨ Vertaal met AI';
 }
 
+// ═══ CHAT: HELP WITH A REPLY (built in, no AI) ═══
+const HELP_SETS = [
+  [/hoe gaat|hoe voel|alles goed|hoe is het/, [['Het gaat goed, dank je!', 'I am fine, thanks!'], ['Ik ben een beetje moe, want…', 'I am a bit tired, because…'], ['Het gaat wel.', 'I am okay.']]],
+  [/waarom/, [['Omdat…', 'Because…'], ['Want ik…', 'Because I…'], ['Dat weet ik niet precies, maar…', 'I do not know exactly, but…']]],
+  [/hoe was|hoe ging|wat heb je|heb je .*(gedaan|gezien|gegeten|gekeken)|gisteren/, [['Het was…', 'It was…'], ['Vandaag heb ik…', 'Today I have…'], ['Ik ben naar … geweest.', 'I went to …'], ['Het ging goed, want…', 'It went well, because…']]],
+  [/ga je|wat doe je|plannen|morgen|weekend|vanavond/, [['Ik ga…', 'I am going to…'], ['Dit weekend ga ik…', 'This weekend I am going to…'], ['Misschien ga ik…', 'Maybe I will…'], ['Ik heb nog geen plannen, maar…', 'I have no plans yet, but…']]],
+  [/vind je|wat vind|lievelings|favoriet|beste|mening|denk je/, [['Ik vind het…', 'I think it is…'], ['Ik vind … leuk.', 'I like …'], ['Mijn favoriete … is…', 'My favourite … is…'], ['Ik denk dat…', 'I think that…']]],
+  [/wil je|zin in|zullen we|heb je zin/, [['Ja, graag!', 'Yes, please!'], ['Ja, dat lijkt me leuk.', 'Yes, that sounds fun.'], ['Nee, liever niet, want…', 'No, rather not, because…']]],
+  [/wanneer|hoe laat/, [['Om … uur.', 'At … o\'clock.'], ['Morgen.', 'Tomorrow.'], ['In het weekend.', 'At the weekend.'], ['Volgende week.', 'Next week.']]],
+  [/\bwaar\b/, [['In…', 'In…'], ['Ik ga naar…', 'I am going to…'], ['Bij mij thuis.', 'At my place.']]],
+  [/ of /, [['Ik kies…', 'I choose…'], ['Liever…', 'Rather…'], ['Allebei!', 'Both!']]],
+  [/heb je|ben je|kun je|kan je|doe je|speel je|kijk je|hou je|houd je/, [['Ja, ik…', 'Yes, I…'], ['Nee, ik … niet.', 'No, I do not …'], ['Soms.', 'Sometimes.'], ['Ja, elke week.', 'Yes, every week.']]]
+];
+const HELP_GENERAL = [['Ik vind het…', 'I think it is…'], ['Ik weet het niet zeker, maar…', 'I am not sure, but…'], ['Wat betekent …?', 'What does … mean?']];
+const HELP_ALWAYS = [['Hoe zeg je … in het Nederlands?', 'How do you say … in Dutch?'], ['En jij?', 'And you?']];
+function helpStarters() {
+  const q = String(lastBotText() || '').toLowerCase(), set = HELP_SETS.find(([re]) => re.test(q));
+  return [...(set ? set[1] : HELP_GENERAL), ...HELP_ALWAYS];
+}
+function toggleHelp(show) {
+  const pop = document.getElementById('help-pop');
+  if (show === undefined) show = pop.classList.contains('hidden');
+  if (!show) { pop.classList.add('hidden'); return; }
+  pop.innerHTML = `<div class="help-title">💡 Zo kun je beginnen. Tik om te gebruiken.</div>` +
+    helpStarters().map(([nl, en]) => `<button class="help-row" data-starter="${esc(nl)}"><b>${esc(nl)}</b><small>${esc(en)}</small></button>`).join('');
+  pop.classList.remove('hidden');
+}
+document.addEventListener('click', e => {
+  const row = e.target.closest('[data-starter]');
+  if (row) {
+    const ta = document.getElementById('msg-input'), t = row.dataset.starter;
+    ta.value = /…$/.test(t) ? t.slice(0, -1) + ' ' : t;
+    autoResize(ta); toggleHelp(false); ta.focus();
+    return;
+  }
+  if (!e.target.closest('#help-pop, #help-btn')) toggleHelp(false);
+});
+
 // ═══ CHAT: SAVE A SELECTED PHRASE ═══
 function inBotText(node) {
   const el = node && (node.nodeType===3 ? node.parentElement : node);
-  return !!(el && el.closest && el.closest('.bot-text'));
+  return !!(el && el.closest && el.closest('.bot-text, .sel-ok'));
 }
 document.addEventListener('selectionchange', () => {
   const sel = window.getSelection();
